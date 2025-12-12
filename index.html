@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>La Mesa — Simple Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">La Mesa</div>
+      <nav class="nav">
+        <a href="#menu">Menu</a>
+
+        
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="hero-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgaRwFtVqSzry4Eqsi6CzvUsqdxYKnigRMg&s" alt="La Mesa interior">
+        <h1>Fresh flavors, warm welcome</h1>
+        <p>Simple, seasonal dishes made with care. Join us for lunch or dinner.</p>
+        <a class="btn" href="#menu">View Menu</a>
+      </div>
+    </section>
+
+    <section id="menu" class="container section">
+      <h2 class="section-title">Our Menu</h2>
+      <div class="menu-grid">
+        <article class="card">
+          <img class="card-photo" src="https://www.budgetbytes.com/wp-content/uploads/2024/06/Grilled-Chicken-Overhead-500x500.jpg" alt="Grilled Chicken">
+          <h3>Grilled Chicken</h3>
+          <p class="desc">Herb-marinated chicken with roasted vegetables.</p>
+          <div class="price">$14</div>
+        </article>
+
+        <article class="card">
+          <img class="card-photo" src="https://png.pngtree.com/png-vector/20240727/ourmid/pngtree-traditional-margherita-pizza-from-campania-png-image_13235087.png" alt="Margherita Pizza">
+          <h3>Margherita Pizza</h3>
+          <p class="desc">Wood-fired pizza with fresh basil and buffalo mozzarella.</p>
+          <div class="price">$12</div>
+        </article>
+
+        <article class="card">
+          <img class="card-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_grV2IZj1pppSVTtG62wPuCv7v2ewP81RzA&s" alt="Seafood Pasta">
+          <h3>Seafood Pasta</h3>
+          <p class="desc">Linguine with shrimp, clams, and a light tomato sauce.</p>
+          <div class="price">$18</div>
+        </article>
+
+        <article class="card">
+          <img class="card-photo" src="https://nyssaskitchen.com/wp-content/uploads/2023/05/Glow-Bowls-21.jpg" alt="Roasted Veg Bowl">
+          <h3>Roasted Veg Bowl</h3>
+          <p class="desc">Seasonal veggies, grain, tahini dressing.</p>
+          <div class="price">$11</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p>La Mesa is a neighborhood restaurant focused on seasonal ingredients and simple preparations. We keep our menu small and change it with the seasons to ensure freshness.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section-title">Contact & Reservations</h2>
+        <div class="contact-grid">
+          <form class="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Reservation request or message"></textarea>
+
+            <button class="btn" type="submit">Send</button>
+          </form>
+
+          <div class="contact-info">
+            <p><strong>Address:</strong> 123 Main St, Your City</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Hours:</strong> Tue–Sun 11:30–22:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> La Mesa</div>
+      <div class="social">Follow us on social — @lamesa</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Prevent actual submission for the demo
+    document.querySelector('.contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks! This demo form does not send messages.');
+    });
+  </script>
+</body>
+</html>
